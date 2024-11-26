@@ -1,0 +1,25 @@
+{
+  "name": "ng-react-bridge",
+  "version": "0.0.1",
+  "description": "Bridge React and Angular for hybrid component integration.",
+  "main": "./dist/index.js",
+  "module": "./dist/index/mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john310897/ng-react-bridge.git"
+  },
+  "author": "john310897",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/john310897/ng-react-bridge/issues"
+  },
+  "homepage": "https://github.com/john310897/ng-react-bridge#readme",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
