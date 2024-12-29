@@ -10,7 +10,13 @@
         "declaration": true,
         "isolatedModules": true,
         "noEmit": true,
-        "outDir": "dist"
+        "outDir": "dist",
+        "declarationMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+    },
+    "angularCompilerOptions": {
+        "compilationMode": "partial" // For Angular compatibility
     },
     "include": [
         "src"
