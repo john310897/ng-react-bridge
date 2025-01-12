@@ -2,11 +2,10 @@
   "name": "ng-react-bridge",
   "version": "0.0.1",
   "description": "Bridge React and Angular for hybrid component integration.",
-  "main": "./dist/index.js",
-  "module": "./dist/index/mjs",
+  "module": "./dist/fesm2022/ng-react-bridge.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup"
+    "build": "ng-packagr -p ng-package.json"
   },
   "repository": {
     "type": "git",
@@ -19,12 +18,26 @@
   },
   "homepage": "https://github.com/john310897/ng-react-bridge#readme",
   "devDependencies": {
-    "@angular/core": "^19.0.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@angular/cli": "^19.0.6",
+    "@angular/compiler-cli": "^19.0.5",
+    "@angular/core": "^19.0.5",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "ng-packagr": "^19.0.1",
+    "typescript": "5.6"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/fesm2022/ng-react-bridge.mjs",
+      "types": "./dist/index.d.ts"
+    }
   }
 }

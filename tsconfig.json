@@ -1,21 +1,29 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "noImplicitAny": true,
-        "esModuleInterop": true,
-        "strictNullChecks": true,
-        "target": "ES2022",
-        "moduleResolution": "Node10",
-        "module": "CommonJS",
         "declaration": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "outDir": "dist"
+        "declarationMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "ES2022",
+        "module": "ESNext",
+        "outDir": "./dist",
+        "strict": true,
+        "types": [
+            "node",
+            "react",
+            "react-dom"
+        ]
+    },
+    "angularCompilerOptions": {
+        "strictInjectionParameters": true,
+        "strictTemplates": true,
+        "compilationMode": "partial"
     },
     "include": [
-        "src"
+        "src/**/*.ts"
     ],
     "exclude": [
-        "node_modules"
+        "src/test.ts",
+        "src/**/*.spec.ts"
     ]
 }

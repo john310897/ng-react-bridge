@@ -10,9 +10,10 @@ export class ReactComponentDirective<Comp extends ElementType> implements OnChan
     @Input() reactComponent!: Comp;
     @Input() props: { [key: string]: any; } | undefined
     private root: Root;
-    private ngZone = inject(NgZone);
+    private ngZone: NgZone;
 
     constructor() {
+        this.ngZone = inject(NgZone)
         const elementRef = inject(ElementRef);
         this.root = createRoot(elementRef.nativeElement);
     }
