@@ -1,4 +1,4 @@
-import { Directive, ElementRef, inject, Input, OnChanges, OnDestroy, NgZone } from "@angular/core";
+import { Directive, ElementRef, Input, OnChanges, OnDestroy, NgZone, runInInjectionContext, Injector } from "@angular/core";
 import { createElement, ElementType } from "react";
 import { createRoot, Root } from "react-dom/client";
 
@@ -9,13 +9,14 @@ import { createRoot, Root } from "react-dom/client";
 export class ReactComponentDirective<Comp extends ElementType> implements OnChanges, OnDestroy {
     @Input() reactComponent!: Comp;
     @Input() props: { [key: string]: any; } | undefined
-    private root: Root;
-    private ngZone: NgZone;
 
-    constructor() {
-        this.ngZone = inject(NgZone)
-        const elementRef = inject(ElementRef);
-        this.root = createRoot(elementRef.nativeElement);
+    private root!: Root;
+
+    constructor(private elementRef: ElementRef, private ngZone: NgZone, private injector: Injector) {
+        console.log("*******************************************************************", injector)
+        runInInjectionContext(this.injector, () => {
+            this.root = createRoot(this.elementRef.nativeElement)
+        })
     }
 
     ngOnChanges() {
