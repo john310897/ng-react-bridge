@@ -26,6 +26,17 @@
     "ng-packagr": "^19.0.1",
     "typescript": "5.6"
   },
+  "keywords": [
+    "Angular",
+    "React",
+    "React integration",
+    "Angular directive",
+    "Hybrid application",
+    "React in Angular",
+    "Angular standalone components",
+    "React components in Angular",
+    "Angular React bridge"
+  ],
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
