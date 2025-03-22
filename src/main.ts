@@ -13,7 +13,6 @@ export class ReactComponentDirective<Comp extends ElementType> implements OnChan
     private root!: Root;
 
     constructor(private elementRef: ElementRef, private ngZone: NgZone, private injector: Injector) {
-        console.log("*******************************************************************", injector)
         runInInjectionContext(this.injector, () => {
             this.root = createRoot(this.elementRef.nativeElement)
         })
