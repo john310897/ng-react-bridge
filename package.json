@@ -1,6 +1,6 @@
 {
   "name": "ng-react-bridge",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "description": "Bridge React and Angular for hybrid component integration.",
   "module": "./dist/fesm2022/ng-react-bridge.mjs",
   "types": "./dist/index.d.ts",
