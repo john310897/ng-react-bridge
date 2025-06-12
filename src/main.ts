@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnChanges, OnDestroy, NgZone, runInInjectionContext, Injector } from "@angular/core";
+import { Directive, ElementRef, Input, OnChanges, OnDestroy, NgZone } from "@angular/core";
 import { createElement, ElementType } from "react";
 import { createRoot, Root } from "react-dom/client";
 
@@ -12,10 +12,8 @@ export class ReactComponentDirective<Comp extends ElementType> implements OnChan
 
     private root!: Root;
 
-    constructor(private elementRef: ElementRef, private ngZone: NgZone, private injector: Injector) {
-        runInInjectionContext(this.injector, () => {
-            this.root = createRoot(this.elementRef.nativeElement)
-        })
+    constructor(private elementRef: ElementRef, private ngZone: NgZone) {
+        this.root = createRoot(this.elementRef.nativeElement)
     }
 
     ngOnChanges() {
