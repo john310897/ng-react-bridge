@@ -4,6 +4,10 @@
   "description": "Bridge React and Angular for hybrid component integration.",
   "module": "./dist/fesm2022/ng-react-bridge.mjs",
   "types": "./dist/index.d.ts",
+  "main": "./dist/fesm2022/ng-react-bridge.mjs",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build:lib": "ng-packagr -p ng-package.json"
   },
@@ -18,15 +22,13 @@
   },
   "homepage": "https://github.com/john310897/ng-react-bridge#readme",
   "devDependencies": {
-    "@angular/cli": "^20.0.0",
-    "@angular/common": "^20.0.0",
-    "@angular/compiler": "^20.0.3",
-    "@angular/compiler-cli": "^20.0.0",
-    "@angular/core": "^20.0.0",
     "ng-packagr": "^20.0.0",
+    "typescript": "5.8",
+    "@angular/compiler-cli": "^20.0.0",
+    "@angular/compiler": "^20.0.3",
+    "@angular/core": "^20.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript": "5.8"
+    "react-dom": "^19.0.0"
   },
   "keywords": [
     "Angular",
@@ -41,8 +43,6 @@
   ],
   "peerDependencies": {
     "@angular/cli": "^20.0.0",
-    "@angular/compiler-cli": "^20.0.0",
-    "@angular/core": "^20.0.0",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "react": "^19.0.0",
