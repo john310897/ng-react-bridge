@@ -3,8 +3,14 @@
 [![NPM version](https://img.shields.io/badge/npm-v10.7.0-brightgreen)](https://www.npmjs.com/package/ng-react-bridge)
 [![NODE version](https://img.shields.io/badge/node-v20.14.0-brightgreen)](https://www.npmjs.com/package/ng-react-bridge)
 [![types](https://img.shields.io/badge/types-TypeScript-blue)](https://www.npmjs.com/package/ng-react-bridge)
+[![license](https://img.shields.io/github/license/john310897/ng-react-bridge)]()
 
 `ng-react-bridge` is a lightweight Angular package designed to bridge React and Angular. It enables developers to seamlessly render React components inside Angular components using a directive, simplifying the integration of both frameworks in hybrid applications.
+
+## Compatability
+
+- ✅ Compatible with Angular 20 and React 17+
+- ⚠️ Built and tested with Angular 20
 
 ## Features
 
@@ -12,6 +18,15 @@
 - Pass props dynamically from Angular to React components.
 - Lightweight and easy-to-use directive.
 - Fully compatible with Angular standalone components.
+
+## 🔧 API
+
+Below are the supported parameters:
+
+| Property   | Type                 | Description                                                             |
+|------------|----------------------|-------------------------------------------------------------------------|
+| `reactComponent` | `React.ComponentType` | The React component to render inside the Angular context.              |
+| `props`     | `Record<string, any>` | An object containing props to pass to the React component.             |
 
 ## Prerequisites
 
