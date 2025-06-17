@@ -29,7 +29,7 @@ npm install react react-dom @types/react @babel/preset-react
 
 And also you need to update tsconfig.json file so it can recognize the react imports and compile JS
 
-```json 
+```ts
 //tsconfig.json
 {
     ...
