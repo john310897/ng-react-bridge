@@ -24,7 +24,22 @@ To use `ng-react-bridge`, ensure your project has the following dependencies ins
 Install them if they are not already present in your project:
 
 ```bash
-npm install react react-dom @babel/preset-react
+npm install react react-dom @types/react @babel/preset-react
+```
+
+And also you need to update tsconfig.json file so it can recognize the react imports and compile JS
+
+```json 
+//tsconfig.json
+{
+    ...
+    "compilerOptions":{
+        ...
+        "jsx": "react",
+        "allowJs": true,
+        "checkJs": true
+    }
+}
 ```
 
 ## Installation
@@ -33,6 +48,53 @@ Install the package via npm:
 
 ```bash
 npm install ng-react-bridge
+```
+
+## Usage
+
+```jsx
+//test-component.jsx
+import React from 'react'
+
+function TestComponent() {
+    return (
+        <div>test-component</div>
+    )
+}
+
+export default TestComponent
+```
+
+```ts
+//app.ts
+import { ReactComponentDirective } from 'ng-react-bridge';
+import TestComponent from '../react-components/test-component.jsx'
+
+@Component({
+  selector: 'app-root',
+  imports: [ReactComponentDirective],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+
+export class App {
+  protected title = 'angular-pkg-test';
+  reactComponent = TestComponent
+}
+```
+
+```html
+<!-- app.html-->
+<main class="main">
+  <div class="content">
+    this is angular app component
+  </div>
+
+    <div>
+        this is react compoent
+        <div [reactComponent]="reactComponent"></div>
+    </div>
+</main>
 ```
 
 ## Contributing
