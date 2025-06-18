@@ -14,9 +14,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve",
-    "jsx": "react",
-    "allowJs": true,
-    "checkJs": true
+    "jsx": "react"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

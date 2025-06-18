@@ -22,13 +22,14 @@
   },
   "homepage": "https://github.com/john310897/ng-react-bridge#readme",
   "devDependencies": {
-    "ng-packagr": "^20.0.0",
-    "typescript": "5.8",
-    "@angular/compiler-cli": "^20.0.0",
     "@angular/compiler": "^20.0.3",
+    "@angular/compiler-cli": "^20.0.0",
     "@angular/core": "^20.0.0",
+    "gh-pages": "^6.3.0",
+    "ng-packagr": "^20.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "typescript": "5.8"
   },
   "keywords": [
     "Angular",
