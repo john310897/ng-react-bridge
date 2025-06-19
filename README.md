@@ -6,6 +6,7 @@
 [![license](https://img.shields.io/github/license/john310897/ng-react-bridge)]()
 
 `ng-react-bridge` is a lightweight Angular package designed to bridge React and Angular. It enables developers to seamlessly render React components inside Angular components using a directive, simplifying the integration of both frameworks in hybrid applications.
+- [Demo](https://john310897.github.io/ng-react-bridge/) (You could find the demo code in the project repo)
 
 ## Compatability
 
